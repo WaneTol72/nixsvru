@@ -18,7 +18,7 @@ function Contacts(props) {
                     className="link-img d-inline-block mr-2"
                     style={{cursor: "pointer", verticalAlign: "sub"}}
                     alt="Logo"
-                    onClick={open(props.href)}
+                    onClick={function(){open(props.href)}}
                 />
                 <div className="d-inline-block">
                     <h4>{props.name}</h4>
@@ -37,7 +37,7 @@ function Contactslink(props) {
             height="50"
             width="50"
             alt="Logo"
-            onClick={open(props.href)}
+            onClick={function(){open(props.href)}}
         />
     );
 }
@@ -64,7 +64,7 @@ class Footer extends Component {
                         <h2 className="mb-3">Ссылки:</h2>
                         <div className="mb-2">
                             <Contactslink img={VK} href={"https://vk.com/phoenix_proj"} />
-                            <Contactslink img={INST} href={"https://vk.com/phoenix_proj"} />
+                            <Contactslink img={INST} href={"https://vk.com/mrtofik"} />
                             <Contactslink img={DIS} href={"https://discord.com/invite/g2ug2Us"} />
                         </div>
                     </Col>
