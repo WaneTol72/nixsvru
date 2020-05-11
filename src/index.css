@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,117 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.fullScreen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.darkness {
+  filter: brightness(50%);
+}
+
+.donate {
+    padding-top: 7%!important;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  padding: 0.5rem 2.5rem!important;
+  font-size: 1.5rem!important;
+}
+
+.progress {
+    height: 8px!important;
+    border-radius: 0!important;
+}
+#stats1>p {
+    font-weight: bold;
+}
+#stats1>p>span {
+    color: #00d000;
+}
+.link-img {
+    transition: all 250ms ease-out;
+}
+.link-img:hover {
+    filter: brightness(75%);
+}
+.pix {
+    transition: all 300ms ease-out;
+}
+.pix:hover {
+    transform: scale(1.1)
+}
+@media (min-width: 768px) {
+    .disc {
+        min-height: 12em;
+    }
+    .carousel-caption2>.container>#stats1>.progress {
+        width: 280px;
+    }
+    .carousel-caption2 {
+        bottom: 30vh!important;
+    }
+}
+@media (min-width: 1200px) {
+  #donate {
+    min-height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    background-color: #343a40;
+  }
+  .carousel-caption2>.container>h1 {
+      font-size: 2rem;
+  }
+    .carousel-caption2 {
+        bottom: 5vh!important;
+    }
+    .carousel-caption2>.container>h2 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption2>.container>h3 {
+        font-size: 1rem;
+    }
+    .carousel-caption2>.container>#stats1>.progress {
+        width: 60vw!important;
+    }
+    .carousel-caption2>.container {
+        padding: 0!important;
+    }
+}
+.bg {
+  width: 100vw;
+  height: 100vh;
+}
+.wrap {
+  width: 12em;
+  height: 12em;
+  position: absolute;
+  top: calc(50% - 6em);
+  left: calc(50% - 6em);
+}
+.loader{
+  display: block;
+  margin: auto;
+  width: 8em;
+  height: 8em;
+  border: 1.1em solid rgb(255, 255, 255);
+  border-top: 1.1em solid #ff7e00;
+  border-radius: 50%;
+  animation: load8 2.1s infinite linear;
+}
+.loader-text {
+  text-align: center;
+}
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
