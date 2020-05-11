@@ -136,6 +136,7 @@ render() {
                         className="darkness d-block min-vh-100 w-100"
                         style={{objectFit: 'cover'}}
                         src={Pic1}
+                        alt="Picture-1"
                     />
                     <Carousel.Caption className="carousel-caption2">
                         <Container>
@@ -143,6 +144,7 @@ render() {
                             src={Pickaxe}
                             height={120}
                             className="pix mb-2"
+                            alt="Pickaxe"
                             />
                             <div id="stats1">
                                 <p className="p-0 m-0"><span>{online0()}</span> / {max0()}</p>

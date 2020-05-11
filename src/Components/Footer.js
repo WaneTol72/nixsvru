@@ -18,12 +18,7 @@ function Contacts(props) {
                     className="link-img d-inline-block mr-2"
                     style={{cursor: "pointer", verticalAlign: "sub"}}
                     alt="Logo"
-                    onClick={function(){
-                        window.open(
-                            props.href,
-                            '_blank' // <- This is what makes it open in a new window.
-                        );
-                    }}
+                    onClick={open(props.href)}
                 />
                 <div className="d-inline-block">
                     <h4>{props.name}</h4>
@@ -32,6 +27,21 @@ function Contacts(props) {
             </div>
     );
 }
+
+function Contactslink(props) {
+    return (
+        <Image
+            className="link-img mr-2 mb-2"
+            style={{cursor: "pointer"}}
+            src={props.img}
+            height="50"
+            width="50"
+            alt="Logo"
+            onClick={open(props.href)}
+        />
+    );
+}
+
 function open(url){
     window.open(
         url,
@@ -53,30 +63,9 @@ class Footer extends Component {
                     <Col lg={2}>
                         <h2 className="mb-3">Ссылки:</h2>
                         <div className="mb-2">
-                            <Image
-                                className="link-img mr-2 mb-2"
-                                style={{cursor: "pointer"}}
-                                src={VK}
-                                height="50"
-                                width="50"
-                                onClick={() => open("https://vk.com/phoenix_proj")}
-                            />
-                            <Image
-                                className="link-img mr-2 mb-2"
-                                style={{cursor: "pointer"}}
-                                src={INST}
-                                height="50"
-                                width="50"
-                                onClick={() => open("https://vk.com/phoenix_proj")}
-                            />
-                            <Image
-                                className="link-img mr-2 mb-2"
-                                style={{cursor: "pointer"}}
-                                src={DIS}
-                                height="50"
-                                width="50"
-                                onClick={() => open("https://discordapp.com/invite/g2ug2Us")}
-                            />
+                            <Contactslink img={VK} href={"https://vk.com/phoenix_proj"} />
+                            <Contactslink img={INST} href={"https://vk.com/phoenix_proj"} />
+                            <Contactslink img={DIS} href={"https://discord.com/invite/g2ug2Us"} />
                         </div>
                     </Col>
                     <Col lg={8}>

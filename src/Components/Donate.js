@@ -4,6 +4,7 @@ import DIAMOND from "../logo/DIAMOND.png"
 import IRON from "../logo/IRON.png"
 import GOLD from "../logo/GOLD.png"
 import EMERALD from "../logo/EMERALD.png"
+// TODO сделать свою систему оплаты и кассу
 function Producttm(props) {
     return (
         <>
@@ -13,7 +14,7 @@ function Producttm(props) {
                     width={"40%"}
                     className="pix d-inline-block mr-2"
                     style={{verticalAlign: "sub"}}
-                    alt="Logo"
+                    alt="Logo-Donate"
                 />
                 <h3 className="mt-2">{props.name}</h3>
                 <h5>Описание:</h5>
