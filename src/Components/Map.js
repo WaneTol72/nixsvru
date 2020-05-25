@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-let src = "https://play.nixsv.ru/:8123/index.html?worldname=world&mapname=surface&zoom=4&x=-3006&y=64&z=544";
+let src = "http://play.nixsv.ru:8123/index.html?worldname=world&mapname=surface&zoom=4&x=-0&y=64&z=0";
 class Map extends Component {
     render() {
         return (

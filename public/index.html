@@ -18,6 +18,11 @@
     <style type="text/css">
       body {
         margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       .bg {
         width: 100vw;
@@ -34,6 +39,24 @@
       .loader-text {
         text-align: center;
       }
+      .loader{
+        display: block;
+        margin: auto;
+        width: 8em;
+        height: 8em;
+        border: 1.1em solid rgb(255, 255, 255);
+        border-top: 1.1em solid #ff7e00;
+        border-radius: 50%;
+        animation: load8 2.1s infinite linear;
+      }
+      @keyframes load8 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -41,34 +64,24 @@
     <div id="root">
       <div class="bg">
         <div class="wrap">
+          <img class="loader" src="server.png"/>
             <h1 class="loader-text">Загрузка...</h1>
         </div>
       </div>
       </div>
     <script>
+      // Если браузер поддерживает service-worker - регистрируем
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          }).catch(function(err) {
-            console.log(err)
-          });
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+                  .then(registration => {
+                    console.log('Service Worker is registered! ');
+                  })
+                  .catch(err => {
+                    console.log('Registration failed  ', err);
+                  });
         });
-      } else {
-        console.log('service worker is not supported');
       }
     </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" async>
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=true,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(53831902, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
-    </script>
-    <noscript>
-      <div><img src="https://mc.yandex.ru/watch/53831902" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
   </body>
 </html>

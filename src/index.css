@@ -1,13 +1,6 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -93,22 +86,4 @@ code {
     .carousel-caption2>.container {
         padding: 0!important;
     }
-}
-.loader{
-  display: block;
-  margin: auto;
-  width: 8em;
-  height: 8em;
-  border: 1.1em solid rgb(255, 255, 255);
-  border-top: 1.1em solid #ff7e00;
-  border-radius: 50%;
-  animation: load8 2.1s infinite linear;
-}
-@keyframes load8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
