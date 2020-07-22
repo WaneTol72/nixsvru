@@ -1,35 +1,39 @@
 {
   "files": {
     "main.css": "/nixsvru/static/css/main.b1e0a46f.chunk.css",
-    "main.js": "/nixsvru/static/js/main.c482be22.chunk.js",
-    "main.js.map": "/nixsvru/static/js/main.c482be22.chunk.js.map",
+    "main.js": "/nixsvru/static/js/main.8dca994a.chunk.js",
+    "main.js.map": "/nixsvru/static/js/main.8dca994a.chunk.js.map",
     "runtime-main.js": "/nixsvru/static/js/runtime-main.84f091e8.js",
     "runtime-main.js.map": "/nixsvru/static/js/runtime-main.84f091e8.js.map",
     "static/css/2.47e06e2e.chunk.css": "/nixsvru/static/css/2.47e06e2e.chunk.css",
     "static/js/2.a4dd78da.chunk.js": "/nixsvru/static/js/2.a4dd78da.chunk.js",
     "static/js/2.a4dd78da.chunk.js.map": "/nixsvru/static/js/2.a4dd78da.chunk.js.map",
     "index.html": "/nixsvru/index.html",
-    "precache-manifest.93a84831f57091899747bef499a8b09a.js": "/nixsvru/precache-manifest.93a84831f57091899747bef499a8b09a.js",
+    "precache-manifest.f840160752e111d5430899629f89ab06.js": "/nixsvru/precache-manifest.f840160752e111d5430899629f89ab06.js",
     "service-worker.js": "/nixsvru/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/nixsvru/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.b1e0a46f.chunk.css.map": "/nixsvru/static/css/main.b1e0a46f.chunk.css.map",
     "static/js/2.a4dd78da.chunk.js.LICENSE.txt": "/nixsvru/static/js/2.a4dd78da.chunk.js.LICENSE.txt",
-    "static/media/BARA.png": "/nixsvru/static/media/BARA.597efd4c.png",
-    "static/media/DIS.png": "/nixsvru/static/media/DIS.07eccabd.png",
-    "static/media/INST.png": "/nixsvru/static/media/INST.f6397dc9.png",
-    "static/media/VITEK.png": "/nixsvru/static/media/VITEK.ef689701.png",
-    "static/media/VK.png": "/nixsvru/static/media/VK.cc6e5405.png",
-    "static/media/WANE.png": "/nixsvru/static/media/WANE.7ec510eb.png",
-    "static/media/pic1.png": "/nixsvru/static/media/pic1.f3a08d85.png",
-    "static/media/pic2.png": "/nixsvru/static/media/pic2.598794b5.png",
-    "static/media/pickaxe.png": "/nixsvru/static/media/pickaxe.9db90bb0.png",
-    "static/media/server.png": "/nixsvru/static/media/server.0dff80b5.png"
+    "static/media/BARA.webp": "/nixsvru/static/media/BARA.0c49ad0a.webp",
+    "static/media/DIAMOND.webp": "/nixsvru/static/media/DIAMOND.b0dcd4c7.webp",
+    "static/media/DIS.webp": "/nixsvru/static/media/DIS.8a909e59.webp",
+    "static/media/EMERALD.webp": "/nixsvru/static/media/EMERALD.5b77ba87.webp",
+    "static/media/GOLD.webp": "/nixsvru/static/media/GOLD.4ea682f7.webp",
+    "static/media/INST.webp": "/nixsvru/static/media/INST.3f562def.webp",
+    "static/media/IRON.webp": "/nixsvru/static/media/IRON.d92d3cd9.webp",
+    "static/media/VITEK.webp": "/nixsvru/static/media/VITEK.761ff3c8.webp",
+    "static/media/VK.webp": "/nixsvru/static/media/VK.e4d0263d.webp",
+    "static/media/WANE.webp": "/nixsvru/static/media/WANE.e4e4e815.webp",
+    "static/media/pic1.webp": "/nixsvru/static/media/pic1.824438f5.webp",
+    "static/media/pic2.webp": "/nixsvru/static/media/pic2.4b0645e8.webp",
+    "static/media/pickaxe.webp": "/nixsvru/static/media/pickaxe.7757a817.webp",
+    "static/media/server.webp": "/nixsvru/static/media/server.411a14c7.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.84f091e8.js",
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.a4dd78da.chunk.js",
     "static/css/main.b1e0a46f.chunk.css",
-    "static/js/main.c482be22.chunk.js"
+    "static/js/main.8dca994a.chunk.js"
   ]
 }
