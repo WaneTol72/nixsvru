@@ -4,14 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!-- Add manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <!-- Tell the browser it's a PWA -->
     <meta name="mobile-web-app-capable" content="yes">
-    <!-- Tell iOS it's a PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Make sure theme-color is defined -->
     <meta name="theme-color" content="#536878">
+    <meta name="application-name" content="Phoenix Project">
     <meta name="description" content="Phoenix Project - Проект игровых серверов"/>
     <meta name="yandex-verification" content="e60561e3ad0abc92" />
     <title>Phoenix Project</title>
@@ -64,7 +61,7 @@
     <div id="root">
       <div class="bg">
         <div class="wrap">
-          <img class="loader" src="server.png"/>
+          <img alt="load" class="loader" src="%PUBLIC_URL%/server.png"/>
             <h1 class="loader-text">Загрузка...</h1>
         </div>
       </div>
@@ -73,8 +70,8 @@
       // Если браузер поддерживает service-worker - регистрируем
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-                  .then(registration => {
+          navigator.serviceWorker.register('%PUBLIC_URL%/service-worker.js')
+                  .then(() => {
                     console.log('Service Worker is registered! ');
                   })
                   .catch(err => {

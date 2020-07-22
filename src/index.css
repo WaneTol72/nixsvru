@@ -1,7 +1,12 @@
 html {
     scroll-behavior: smooth;
 }
-
+body {
+    background-color: #343a40!important;
+}
+.fixed-top {
+    z-index: 100!important;
+}
 ::-webkit-scrollbar {
     height: 12px;
     width: 14px;
@@ -61,11 +66,24 @@ code {
     height: 8px!important;
     border-radius: 0!important;
 }
-#stats1>p {
+#stats0>p {
     font-weight: bold;
 }
-#stats1>p>span {
+#stats0>p>span {
     color: #00d000;
+}
+.modal-content {
+    background-color: #343a40!important;
+    color: white;
+}
+.modal-header {
+    border-bottom: 1px solid #0000006b!important;
+}
+.modal-footer {
+    border-top: 1px solid #0000006b!important;
+}
+.close {
+    color: #fff!important;
 }
 .link-img {
     transition: all 250ms ease-out;
@@ -83,7 +101,7 @@ code {
     .disc {
         min-height: 12em;
     }
-    .carousel-caption2>.container>#stats1>.progress {
+    .carousel-caption2>.container>#stats0>.progress {
         width: 280px;
     }
     .carousel-caption2 {
@@ -111,7 +129,7 @@ code {
     .carousel-caption2>.container>h3 {
         font-size: 1rem;
     }
-    .carousel-caption2>.container>#stats1>.progress {
+    .carousel-caption2>.container>#stats0>.progress {
         width: 60vw!important;
     }
     .carousel-caption2>.container {

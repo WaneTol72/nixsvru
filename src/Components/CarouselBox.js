@@ -5,13 +5,17 @@ import Pic1 from '../assets/pic1.png';
 import Pic2 from '../assets/pic2.png';
 import Pickaxe from '../logo/pickaxe.png'
 
-function MyVerticallyCenteredModal(props) {
+const url0 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25565";
+const url1 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25566";
+
+    function MyVerticallyCenteredModal(props) {
     return (
         <Modal
             {...props}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
@@ -49,17 +53,34 @@ function Button1(props) {
     );
 }
 
-class CarouselBox extends Component {
+function OnlineServer(props) {
+    let online0 = props.online;
+    let max0 = props.max;
+    return (
+        <>
+            <p className="p-0 m-0"><span>{online0}</span> / {max0}</p>
+            <ProgressBar variant="success" className="mr-auto ml-auto mt-2" max={max0} now={online0}/>
+        </>
+    );
+    }
+function OfflineServer() {
+    return (<h2>Сервер <span style={{color:"red"}}>выключен</span></h2>)
+}
+
+    class CarouselBox extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             data0: {
+                online: true,
                 players: {
-                    online: 0,
+                    online: 12,
                     max: 100
                 }
             },
             data1: {
+                online: false,
                 players: {
                     online: 0,
                     max: 100
@@ -69,66 +90,20 @@ class CarouselBox extends Component {
     }
 
     async componentDidMount() {
-        let serverstats = async () => {
-            const server0 = await fetch("https://api.mcsrvstat.us/2/play.nixsv.ru:25565");
-            const server1 = await fetch("https://api.mcsrvstat.us/2/play.nixsv.ru:25566");
+        let serverStatus = async () => {
+            const server0 = await fetch(url0);
+            const server1 = await fetch(url1);
             const data0 = await server0.json();
             const data1 = await server1.json();
             this.setState({data0: data0});
             this.setState({data1: data1});
         };
-        await serverstats();
-        setInterval(await serverstats, 30000);
-    }
-
-    componentDidUpdate() {
-        let UpdateServers = () => {
-            if (this.state.data0.online !== true) {
-                document.getElementById('stats1').innerHTML = "<h2>Сервер <span style='color:red'>выключен</span></h2>";
-            }
-            if (this.state.data1.online !== true) {
-                document.getElementById('stats2').innerHTML = "<h2>Сервер <span style='color:red'>выключен</span></h2>";
-            }
-        };
-        UpdateServers();
+       await serverStatus();
+       setInterval(await serverStatus, 30000);
     }
 
 render() {
-    let online0 = () => {
-        if (this.state.data0.online === true) {
-            return this.state.data0.players.online;
-        }
-        else {
-            return 100;
-        }
-    };
-    let max0 = () => {
-            if (this.state.data0.online === true) {
-                return this.state.data0.players.max;
-            }
-            else {
-                return 100;
-            }
-        };
-
-    let online1 = () => {
-        if (this.state.data1.online === true) {
-            return this.state.data1.players.online;
-        }
-        else {
-            return 100;
-        }
-    };
-    let max1 = () => {
-        if (this.state.data1.online === true) {
-            return this.state.data1.players.max;
-        }
-        else {
-            return 100;
-        }
-    };
-
-        return (
+    return (
             <>
             <Carousel id="home" interval={null} indicators={false} fade={true}>
                 <Carousel.Item>
@@ -146,9 +121,8 @@ render() {
                             className="pix mb-2"
                             alt="Pickaxe"
                             />
-                            <div id="stats1">
-                                <p className="p-0 m-0"><span>{online0()}</span> / {max0()}</p>
-                                <ProgressBar variant="success" className="mr-auto ml-auto mt-2" max={max0()} now={online0()} />
+                            <div id="stats0">
+                                {this.state.data0.online ? <OnlineServer online={this.state.data0.players.online} max={this.state.data0.players.max} /> : <OfflineServer />}
                             </div>
                             <h1 className="font-weight-bold">Phoenix Classic</h1>
                             <h3 className="mt-1 mb-4">Классический сервер с большим набором<br/>
@@ -167,12 +141,17 @@ render() {
                     />
                     <Carousel.Caption className="carousel-caption2">
                         <Container>
-                            <h1 className="font-weight-bold">Pheonix Хуяссик</h1>
-                            <div id="stats2">
-                                <p className="p-0 m-0"><span>{online0()}</span>/{max0()}</p>
-                                <ProgressBar variant="warning" className="mr-auto ml-auto mt-2" max={max1()} now={online1()} />
+                            <Image
+                                src={Pickaxe}
+                                height={120}
+                                className="pix mb-2"
+                                alt="Pickaxe"
+                            />
+                            <div id="stats1">
+                                {this.state.data1.online ? <OnlineServer online={this.state.data1.players.online} max={this.state.data1.players.max} /> : <OfflineServer />}
                             </div>
-                            <h2>Хуёвый сервер</h2>
+                            <h1 className="font-weight-bold">Pheonix Test</h1>
+                            <h2>В разработке</h2>
                             <Button1 ip={"Пусто"}/>
                         </Container>
                     </Carousel.Caption>

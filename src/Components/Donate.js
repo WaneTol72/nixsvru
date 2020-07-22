@@ -6,9 +6,10 @@ import GOLD from "../logo/GOLD.png"
 import EMERALD from "../logo/EMERALD.png"
 // TODO сделать свою систему оплаты и кассу
 
-function Producttm(props) {
+function DonateTemplate(props) {
+
     return (
-    props.posts.map((post) =>
+    props.posts.map(post =>
         <Col md={3} key={post.id}>
             <Image
                 src={post.picture}
@@ -35,13 +36,13 @@ class Donate extends Component {
                 id: 1,
                 title: 'PRO на месяц',
                 content:
-                    'Возможности:\n' +
-                    '+ /hat\n' +
-                    '+ /workbench\n' +
-                    '+ 2 /sethome\n' +
-                    '+ /ec\n' +
-                    '+ Префикс в чате\n' +
-                    '+ Возможности Default',
+                    `Возможности:
+                    + /hat
+                    + /workbench
+                    + 2 /sethome
+                    + /ec
+                    + Префикс в чате 
+                    + Возможности Default`,
                 price: 25,
                 picture: IRON
             },
@@ -49,12 +50,12 @@ class Donate extends Component {
                 id: 2,
                 title: 'VIP на месяц',
                 content:
-                    'Возможности на Classic сервере:\n' +
-                    '+ /kit vip\n' +
-                    '+ /feed\n' +
-                    '+ /sethome\n' +
-                    '+ /tptoggle - отключать телепорт к себе+ Префикс в чате\n' +
-                    '+ Возможности PRO',
+                    `Возможности на Classic сервере:
+                    + /kit vip
+                    + /feed
+                    + /sethome
+                    + /tptoggle - отключать телепорт к себе+ Префикс в чате
+                    + Возможности PRO`,
                 price: 50,
                 picture: GOLD
             },
@@ -62,15 +63,15 @@ class Donate extends Component {
                 id: 3,
                 title: 'Premium на месяц',
                 content:
-                    'Возможности на Classic сервере:\n' +
-                    '+ /kit premium\n' +
-                    '+ /repair\n' +
-                    '+ 10 /sethome\n' +
-                    '+ /tptoggle - отключать телепорт к себе\n' +
-                    '+ /clear\n' +
-                    '+ /back\n' +
-                    '+ Префикс в чате на всех серверах\n' +
-                    '+ Возможности PRO и VIP',
+                    `Возможности на Classic сервере:
+                    + /kit premium
+                    + /repair
+                    + 10 /sethome
+                    + /tptoggle - отключать телепорт к себе
+                    + /clear
+                    + /back
+                    + Префикс в чате на всех серверах
+                    + Возможности PRO и VIP`,
                 price: 100,
                 picture: DIAMOND
             },
@@ -78,7 +79,7 @@ class Donate extends Component {
                 id: 4,
                 title: 'Разбан на сервере',
                 content:
-                    'Разбанит вас за небольшую плату',
+                    `Разбанит вас за небольшую плату`,
                 price: 100,
                 picture: EMERALD
             }
@@ -89,7 +90,7 @@ class Donate extends Component {
                     <Col md={12}>
                         <h1>Донат</h1>
                     </Col>
-                    <Producttm posts={posts} />
+                    <DonateTemplate posts={posts} />
                 </Row>
             </Container>
         );
