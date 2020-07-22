@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Col, Container, Image, Row} from "react-bootstrap";
-import VITEK from '../logo/VITEK.png';
-import WANE from '../logo/WANE.png';
-import BARA from '../logo/BARA.png';
-import INST from '../logo/INST.png';
-import VK from '../logo/VK.png';
-import DIS from '../logo/DIS.png';
+import VITEK from '../logo/VITEK.webp';
+import WANE from '../logo/WANE.webp';
+import BARA from '../logo/BARA.webp';
+import INST from '../logo/INST.webp';
+import VK from '../logo/VK.webp';
+import DIS from '../logo/DIS.webp';
 
 function Contacts(props) {
     return (

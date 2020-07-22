@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Col, Container, Row, Image, Button} from "react-bootstrap";
-import DIAMOND from "../logo/DIAMOND.png"
-import IRON from "../logo/IRON.png"
-import GOLD from "../logo/GOLD.png"
-import EMERALD from "../logo/EMERALD.png"
+import DIAMOND from "../logo/DIAMOND.webp"
+import IRON from "../logo/IRON.webp"
+import GOLD from "../logo/GOLD.webp"
+import EMERALD from "../logo/EMERALD.webp"
 // TODO сделать свою систему оплаты и кассу
 
 function DonateTemplate(props) {

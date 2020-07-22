@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, Nav ,Container} from "react-bootstrap";
-import logo from '../logo/server.png';
+import logo from '../logo/server.webp';
 import $ from 'jquery';
 
 $(document).ready(function () {

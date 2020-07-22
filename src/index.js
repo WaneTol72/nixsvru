@@ -7,7 +7,7 @@ import {Image} from "react-bootstrap";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home"
-import LOG from "./logo/server.png"
+import LOG from "./logo/server.webp"
 
 class App extends React.Component {
     state = {

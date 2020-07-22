@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Button, Container, ProgressBar, Modal, Image} from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
-import Pic1 from '../assets/pic1.png';
-import Pic2 from '../assets/pic2.png';
-import Pickaxe from '../logo/pickaxe.png'
+import Pic1 from '../assets/pic1.webp';
+import Pic2 from '../assets/pic2.webp';
+import Pickaxe from '../logo/pickaxe.webp'
 
 const url0 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25565";
 const url1 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25566";
