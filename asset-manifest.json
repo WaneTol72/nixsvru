@@ -1,32 +1,32 @@
 {
   "files": {
     "main.css": "/nixsvru/static/css/main.faebfa12.chunk.css",
-    "main.js": "/nixsvru/static/js/main.e2a49790.chunk.js",
-    "main.js.map": "/nixsvru/static/js/main.e2a49790.chunk.js.map",
+    "main.js": "/nixsvru/static/js/main.d25dccc5.chunk.js",
+    "main.js.map": "/nixsvru/static/js/main.d25dccc5.chunk.js.map",
     "runtime-main.js": "/nixsvru/static/js/runtime-main.ae1d38b3.js",
     "runtime-main.js.map": "/nixsvru/static/js/runtime-main.ae1d38b3.js.map",
     "static/css/2.af3c1da9.chunk.css": "/nixsvru/static/css/2.af3c1da9.chunk.css",
     "static/js/2.e0a27248.chunk.js": "/nixsvru/static/js/2.e0a27248.chunk.js",
     "static/js/2.e0a27248.chunk.js.map": "/nixsvru/static/js/2.e0a27248.chunk.js.map",
     "index.html": "/nixsvru/index.html",
-    "precache-manifest.166829dbe9ea610702957f9d2ae17e28.js": "/nixsvru/precache-manifest.166829dbe9ea610702957f9d2ae17e28.js",
+    "precache-manifest.1a03f966388c207dc110ca50add169e4.js": "/nixsvru/precache-manifest.1a03f966388c207dc110ca50add169e4.js",
     "service-worker.js": "/nixsvru/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/nixsvru/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.faebfa12.chunk.css.map": "/nixsvru/static/css/main.faebfa12.chunk.css.map",
     "static/js/2.e0a27248.chunk.js.LICENSE.txt": "/nixsvru/static/js/2.e0a27248.chunk.js.LICENSE.txt",
-    "static/media/BARA.webp": "/nixsvru/static/media/BARA.0c49ad0a.webp",
+    "static/media/BARA.webp": "/nixsvru/static/media/BARA.3c668a9c.webp",
     "static/media/DIAMOND.webp": "/nixsvru/static/media/DIAMOND.b0dcd4c7.webp",
     "static/media/DIS.webp": "/nixsvru/static/media/DIS.8a909e59.webp",
     "static/media/EMERALD.webp": "/nixsvru/static/media/EMERALD.5b77ba87.webp",
     "static/media/GOLD.webp": "/nixsvru/static/media/GOLD.4ea682f7.webp",
     "static/media/INST.webp": "/nixsvru/static/media/INST.3f562def.webp",
     "static/media/IRON.webp": "/nixsvru/static/media/IRON.d92d3cd9.webp",
-    "static/media/VITEK.webp": "/nixsvru/static/media/VITEK.761ff3c8.webp",
+    "static/media/VITEK.webp": "/nixsvru/static/media/VITEK.2bd7cacc.webp",
     "static/media/VK.webp": "/nixsvru/static/media/VK.e4d0263d.webp",
-    "static/media/WANE.webp": "/nixsvru/static/media/WANE.e4e4e815.webp",
+    "static/media/WANE.webp": "/nixsvru/static/media/WANE.dea9de28.webp",
     "static/media/pic1.webp": "/nixsvru/static/media/pic1.824438f5.webp",
     "static/media/pic2.webp": "/nixsvru/static/media/pic2.4b0645e8.webp",
-    "static/media/pickaxe.webp": "/nixsvru/static/media/pickaxe.7757a817.webp",
+    "static/media/pickaxe.webp": "/nixsvru/static/media/pickaxe.32816f89.webp",
     "static/media/server.webp": "/nixsvru/static/media/server.411a14c7.webp"
   },
   "entrypoints": [
@@ -34,6 +34,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.e0a27248.chunk.js",
     "static/css/main.faebfa12.chunk.css",
-    "static/js/main.e2a49790.chunk.js"
+    "static/js/main.d25dccc5.chunk.js"
   ]
 }

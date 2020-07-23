@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3f797c3ad89615d4c53a2349eaea073",
+    "revision": "30dbefaba64220eadedcf87a7d2f866b",
     "url": "/nixsvru/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nixsvru/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "ef9cf21be72047ef8e72",
+    "revision": "982b406d53c1a93cbe68",
     "url": "/nixsvru/static/css/main.faebfa12.chunk.css"
   },
   {
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nixsvru/static/js/2.e0a27248.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ef9cf21be72047ef8e72",
-    "url": "/nixsvru/static/js/main.e2a49790.chunk.js"
+    "revision": "982b406d53c1a93cbe68",
+    "url": "/nixsvru/static/js/main.d25dccc5.chunk.js"
   },
   {
     "revision": "f4eb731b4fb387743e69",
     "url": "/nixsvru/static/js/runtime-main.ae1d38b3.js"
   },
   {
-    "revision": "0c49ad0aa9f5ac7116296f98a98f77a5",
-    "url": "/nixsvru/static/media/BARA.0c49ad0a.webp"
+    "revision": "3c668a9c5fc018fd6c61be2a61186f35",
+    "url": "/nixsvru/static/media/BARA.3c668a9c.webp"
   },
   {
     "revision": "b0dcd4c7c95e74a96a3f47a9d7f66bf2",
@@ -56,16 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nixsvru/static/media/IRON.d92d3cd9.webp"
   },
   {
-    "revision": "761ff3c8b4ee2f711c1cc5051e4d471b",
-    "url": "/nixsvru/static/media/VITEK.761ff3c8.webp"
+    "revision": "2bd7cacc34cb13883c64aec9b1553ecf",
+    "url": "/nixsvru/static/media/VITEK.2bd7cacc.webp"
   },
   {
     "revision": "e4d0263d40dd05253b32c6c7b16a174b",
     "url": "/nixsvru/static/media/VK.e4d0263d.webp"
   },
   {
-    "revision": "e4e4e815ee16af6e86c0ca06dbdcbc12",
-    "url": "/nixsvru/static/media/WANE.e4e4e815.webp"
+    "revision": "dea9de28dde183abb5a6d191b2f4d42e",
+    "url": "/nixsvru/static/media/WANE.dea9de28.webp"
   },
   {
     "revision": "824438f50b3512775deb8a33cf053695",
@@ -76,8 +76,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nixsvru/static/media/pic2.4b0645e8.webp"
   },
   {
-    "revision": "7757a817d9e2d192cb181fef49e12d4b",
-    "url": "/nixsvru/static/media/pickaxe.7757a817.webp"
+    "revision": "32816f89f72b70dc8ef38bbfe0209808",
+    "url": "/nixsvru/static/media/pickaxe.32816f89.webp"
   },
   {
     "revision": "411a14c754a2eb4f2a7e977934f51032",
