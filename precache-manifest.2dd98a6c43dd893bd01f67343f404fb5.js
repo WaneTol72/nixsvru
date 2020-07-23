@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30dbefaba64220eadedcf87a7d2f866b",
+    "revision": "9280b937762867d9c24eb95d77c386dc",
     "url": "/nixsvru/index.html"
   },
   {
-    "revision": "5db1f9bbf559df9994ad",
+    "revision": "3911f034d82cc35a0f67",
     "url": "/nixsvru/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "982b406d53c1a93cbe68",
+    "revision": "c17068c91fd736e8a887",
     "url": "/nixsvru/static/css/main.faebfa12.chunk.css"
   },
   {
-    "revision": "5db1f9bbf559df9994ad",
-    "url": "/nixsvru/static/js/2.e0a27248.chunk.js"
+    "revision": "3911f034d82cc35a0f67",
+    "url": "/nixsvru/static/js/2.dee936a4.chunk.js"
   },
   {
-    "revision": "7c4b6536cab2d1970758ff058c5fbbf8",
-    "url": "/nixsvru/static/js/2.e0a27248.chunk.js.LICENSE.txt"
+    "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
+    "url": "/nixsvru/static/js/2.dee936a4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "982b406d53c1a93cbe68",
-    "url": "/nixsvru/static/js/main.d25dccc5.chunk.js"
+    "revision": "c17068c91fd736e8a887",
+    "url": "/nixsvru/static/js/main.ceffe55b.chunk.js"
   },
   {
     "revision": "f4eb731b4fb387743e69",
