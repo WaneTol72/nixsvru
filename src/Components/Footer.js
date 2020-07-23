@@ -28,7 +28,7 @@ function Contacts(props) {
     );
 }
 
-function Contactslink(props) {
+function ContactLink(props) {
     return (
         <Image
             className="link-img mr-2 mb-2"
@@ -63,9 +63,9 @@ class Footer extends Component {
                     <Col lg={2}>
                         <h2 className="mb-3">Ссылки:</h2>
                         <div className="mb-2">
-                            <Contactslink img={VK} href={"https://vk.com/phoenix_proj"} />
-                            <Contactslink img={INST} href={"https://vk.com/mrtofik"} />
-                            <Contactslink img={DIS} href={"https://discord.com/invite/g2ug2Us"} />
+                            <ContactLink img={VK} href={"https://vk.com/phoenix_proj"} />
+                            <ContactLink img={INST} href={"https://vk.com/mrtofik"} />
+                            <ContactLink img={DIS} href={"https://discord.com/invite/g2ug2Us"} />
                         </div>
                     </Col>
                     <Col lg={8}>
