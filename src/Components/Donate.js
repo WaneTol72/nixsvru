@@ -1,10 +1,52 @@
 import React, {Component} from 'react';
-import {Col, Container, Row, Image, Button} from "react-bootstrap";
+import {Col, Container, Row, Image, Button, Form} from "react-bootstrap";
 import DIAMOND from "../logo/DIAMOND.webp"
 import IRON from "../logo/IRON.webp"
 import GOLD from "../logo/GOLD.webp"
 import EMERALD from "../logo/EMERALD.webp"
+import {ButtonModal} from "./Modal";
 // TODO сделать свою систему оплаты и кассу
+
+
+function YandexForm(props) {
+    return (
+        <>
+            <Form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+                <Form.Control type="hidden" name="receiver" value="410011556938517" />
+                <Form.Control type="hidden" name="formcomment" value="Разбан" />
+                <Form.Group>
+                <Form.Label column="sm">Услуга: разбан</Form.Label>
+                <Form.Control type="hidden" name="short-dest"  value="Разбан" />
+                </Form.Group>
+                <Form.Control type="hidden" name="label" value="$order_id" />
+                <Form.Control type="hidden" name="quickpay-form" value="shop" />
+                <Form.Control name="targets" value="транзакция {order_id}" />
+                <br />
+                <p>Разбан нахуй на серве ЕБАНЫЙ РОТ</p>
+                <br />
+                <Form.Group as={Row}>
+                    <Form.Label column="md" md={2}>Комментарий:</Form.Label>
+                    <Col md={10}>
+                <Form.Control name="comment" />
+                    </Col>
+                </Form.Group>
+                        <Form.Group as={Row}>
+                    <Form.Label column="md" md={1}>Сумма:</Form.Label>
+                        <Col md={3}>
+                <Form.Control size="lg" inline readOnly name="sum" value="100" data-type="number" />
+                        </Col>
+                            <Col md={8}>
+                                <Form.Check label="Яндекс.Деньгами" type="radio" name="paymentType" value="PC" />
+                                <Form.Check label="Банковской картой" type="radio" name="paymentType" value="AC" />
+                            </Col>
+                        </Form.Group>
+                <Form.Control type="hidden" name="need-email" value="false" />
+
+                <Button variant="primary" type="submit">Закинуть лавэ</Button>
+            </Form>
+        </>
+);
+}
 
 function DonateTemplate(props) {
 

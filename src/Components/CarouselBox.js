@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Button, Container, ProgressBar, Modal, Image} from "react-bootstrap";
+import {Container, ProgressBar, Image} from "react-bootstrap";
+import {ButtonModal} from "./Modal";
 import Carousel from 'react-bootstrap/Carousel';
 import Pic1 from '../assets/pic1.webp';
 import Pic2 from '../assets/pic2.webp';
@@ -7,51 +8,6 @@ import Pickaxe from '../logo/pickaxe.webp'
 
 const url0 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25565";
 const url1 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25566";
-
-    function MyVerticallyCenteredModal(props) {
-    return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    Окно копирования
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <h4>Скопируйте адрес:</h4>
-                <h5>
-                    {props.ip}
-                </h5>
-                <p>Скопируйте ip и добавьте его в minecraft сервера, чтобы не забыть!</p>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={props.onHide}>Закрыть</Button>
-            </Modal.Footer>
-        </Modal>
-
-    );
-}
-
-function Button1(props) {
-    const [modalShow, setModalShow] = React.useState(false);
-    return (
-        <>
-            <Button onClick={() => setModalShow(true)} size="lg" variant="success" className="mr-2 ml-2 rounded-pill">
-                Играть
-            </Button>
-            <MyVerticallyCenteredModal
-                ip={props.ip}
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-            />
-        </>
-    );
-}
 
 function OnlineServer(props) {
     let online0 = props.online;
@@ -90,16 +46,30 @@ function OfflineServer() {
     }
 
     async componentDidMount() {
-        let serverStatus = async () => {
-            const server0 = await fetch(url0);
-            const server1 = await fetch(url1);
-            const data0 = await server0.json();
-            const data1 = await server1.json();
-            this.setState({data0: data0});
-            this.setState({data1: data1});
+       const serverStatus = async (url) => {
+           console.log("Соединение с API...");
+            try {
+                console.log("Запрос JSON...");
+                await fetch(url)
+                    .then(
+                        response => {
+                            return response.status > 400 ? console.log(response.status) : response.json()
+                        }
+                    )
+                    .then(
+                        data => {
+                        console.log("Занесение данных...");
+                        this.setState({data0: data});
+                    }
+                    );
+            }
+            catch (err) {
+                console.error('Ошибка:', err);
+            }
         };
-       await serverStatus();
-       setInterval(await serverStatus, 30000);
+       await serverStatus(url0);
+        await serverStatus(url1);
+        setInterval(() => {serverStatus(url0); serverStatus(url1);}, 30000);
     }
 
 render() {
@@ -129,7 +99,12 @@ render() {
                                 плагинов для любителей игры на <br/>
                                 самом популярном типе серверов
                             </h3>
-                            <Button1 ip={"play.nixsv.ru"}/>
+                            <ButtonModal
+                                text={"Играть"}
+                                title={"Окно копирования"}
+                                variant={"success"}
+                                body={<><h4>Скопируйте адрес:</h4><h5>play.nixsv.ru</h5><p>Скопируйте ip и добавьте его в minecraft сервера, чтобы не забыть!</p></>}
+                            />
                     </Container>
                 </Carousel.Caption>
                 </Carousel.Item>
@@ -152,7 +127,13 @@ render() {
                             </div>
                             <h1 className="font-weight-bold">Pheonix Test</h1>
                             <h2>В разработке</h2>
-                            <Button1 ip={"Пусто"}/>
+                            <ButtonModal
+                                disabled={true}
+                                text={"Играть"}
+                                title={"Окно копирования"}
+                                variant={"success"}
+                                body={<><h4>Скопируйте адрес:</h4><h5>Пусто</h5><p>Скопируйте ip и добавьте его в minecraft сервера, чтобы не забыть!</p></>}
+                            />
                         </Container>
                     </Carousel.Caption>
                 </Carousel.Item>
