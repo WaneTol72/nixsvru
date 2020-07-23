@@ -1,7 +1,7 @@
 {
  "name": "Phoenix Project",
  "short_name": "Phoenix",
- "start_url": "/nixsvru/",
+ "start_url": "https://nixsv.ru/",
  "icons": [
   {
    "src": "./android-chrome-192x192.png",
