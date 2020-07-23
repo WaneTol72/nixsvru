@@ -30,16 +30,14 @@
         background-color: #343a40!important
       }
       .wrap {
-        width: 12em;
-        height: 12em;
+        width: 8em;
+        height: 8em;
         position: absolute;
-        top: calc(50% - 6em);
-        left: calc(50% - 6em);
-      }
-      .loader-text {
-        text-align: center;
+        top: calc(50% - 4em);
+        left: calc(50% - 4em);
       }
       .loader{
+        box-sizing: border-box;
         display: block;
         margin: auto;
         width: 8em;
@@ -65,7 +63,6 @@
       <div class="bg">
         <div class="wrap">
           <img alt="load" class="loader" src="%PUBLIC_URL%/server.webp"/>
-            <h1 class="loader-text">Загрузка...</h1>
         </div>
       </div>
       </div>

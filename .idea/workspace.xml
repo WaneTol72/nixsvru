@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5df5f168-d795-401a-a912-8de092e3ec5e" name="Default Changelist" comment="Обнова ебать подъехала">
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal.js" afterDir="false" />
+    <list default="true" id="5df5f168-d795-401a-a912-8de092e3ec5e" name="Default Changelist" comment="Мелкие фиксы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CarouselBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CarouselBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Donate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Donate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Info.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo/BARA.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo/BARA.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo/VITEK.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo/VITEK.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo/WANE.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo/WANE.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo/pickaxe.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo/pickaxe.webp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +173,8 @@
       <workItem from="1595440955955" duration="7901000" />
       <workItem from="1595449074359" duration="779000" />
       <workItem from="1595451151631" duration="230000" />
-      <workItem from="1595483316026" duration="13066000" />
+      <workItem from="1595483316026" duration="14497000" />
+      <workItem from="1595506829788" duration="2052000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1589186004227</created>
@@ -237,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595451369944</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Обнова ебать подъехала">
+      <created>1595498083663</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1595498083663</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +285,7 @@
     <MESSAGE value="0.5 Ускорение и исправления" />
     <MESSAGE value="Правки" />
     <MESSAGE value="Обнова ебать подъехала" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обнова ебать подъехала" />
+    <MESSAGE value="Мелкие фиксы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мелкие фиксы" />
   </component>
 </project>

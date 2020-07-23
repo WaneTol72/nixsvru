@@ -29,7 +29,6 @@ class App extends React.Component {
                     <div className="bg-dark bg">
                         <div className="wrap">
                             <Image className="loader" src={LOG}/>
-                            <h1 className="loader-text">Загрузка...</h1>
                         </div>
                     </div>
                     </>
@@ -47,7 +46,7 @@ class App extends React.Component {
 }
 
 function demoAsyncCall() {
-    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+    return new Promise((resolve) => resolve());
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));

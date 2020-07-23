@@ -29,9 +29,9 @@ function OfflineServer() {
         super(props);
         this.state = {
             data0: {
-                online: true,
+                online: false,
                 players: {
-                    online: 12,
+                    online: 0,
                     max: 100
                 }
             },
@@ -46,30 +46,25 @@ function OfflineServer() {
     }
 
     async componentDidMount() {
-       const serverStatus = async (url) => {
+       async function serverStatus(url) {
            console.log("Соединение с API...");
             try {
                 console.log("Запрос JSON...");
-                await fetch(url)
-                    .then(
-                        response => {
-                            return response.status > 400 ? console.log(response.status) : response.json()
-                        }
-                    )
-                    .then(
-                        data => {
-                        console.log("Занесение данных...");
-                        this.setState({data0: data});
-                    }
-                    );
+                const response = await fetch(url);
+                const data = await response.json();
+                console.log("Данные успешно занесены");
+                return data
             }
             catch (err) {
                 console.error('Ошибка:', err);
             }
+        }
+        const setState = (url) => {
+           this.setState({data0: serverStatus(url)});
         };
-       await serverStatus(url0);
-        await serverStatus(url1);
-        setInterval(() => {serverStatus(url0); serverStatus(url1);}, 30000);
+        setState(url0);
+        setState(url1);
+        setInterval(() => {setState(url0); setState(url1);}, 60000);
     }
 
 render() {
