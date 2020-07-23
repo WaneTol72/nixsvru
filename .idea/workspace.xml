@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5df5f168-d795-401a-a912-8de092e3ec5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +167,8 @@
       <workItem from="1595451151631" duration="230000" />
       <workItem from="1595483316026" duration="14497000" />
       <workItem from="1595506829788" duration="2633000" />
-      <workItem from="1595514788608" duration="611000" />
+      <workItem from="1595514788608" duration="888000" />
+      <workItem from="1595516909489" duration="968000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1589186004227</created>
@@ -247,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595508928986</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Удалена старая прокрутка и улучшен костыль с лейблом">
+      <created>1595515670935</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1595515670935</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +294,7 @@
     <MESSAGE value="Правки" />
     <MESSAGE value="Обнова ебать подъехала" />
     <MESSAGE value="Мелкие фиксы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Мелкие фиксы" />
+    <MESSAGE value="Удалена старая прокрутка и улучшен костыль с лейблом" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удалена старая прокрутка и улучшен костыль с лейблом" />
   </component>
 </project>
