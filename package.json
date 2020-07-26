@@ -1,6 +1,6 @@
 {
   "name": "nixsvru",
-  "homepage": ".",
+  "homepage": "https://nixsv.ru/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
