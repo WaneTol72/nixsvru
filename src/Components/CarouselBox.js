@@ -30,17 +30,9 @@ function OfflineServer() {
         this.state = {
             data0: {
                 online: false,
-                players: {
-                    online: 0,
-                    max: 100
-                }
             },
             data1: {
                 online: false,
-                players: {
-                    online: 0,
-                    max: 100
-                }
             }
         }
     }
@@ -59,14 +51,11 @@ function OfflineServer() {
                 console.error('Ошибка:', err);
             }
         }
-        const setState = (url) => {
-           this.setState({data0: serverStatus(url)});
-        };
-        setState(url0);
-        setState(url1);
-        setInterval(() => {setState(url0); setState(url1);}, 60000);
+        const setState = async (data, url) => {data === "data0" ? this.setState({ data0: await serverStatus(url)}) : this.setState({ data1: await serverStatus(url)});};
+        await setState("data0", url0);
+        await setState("data1", url1);
+        setInterval(async () => {await setState("data0", url0); await setState("data1", url1);}, 60000);
     }
-
 render() {
     return (
             <>
@@ -87,7 +76,7 @@ render() {
                             alt="Pickaxe"
                             />
                             <div id="stats0">
-                                {this.state.data0.online ? <OnlineServer online={this.state.data0.players.online} max={this.state.data0.players.max} /> : <OfflineServer />}
+                                {this.state.data0.online ? <OnlineServer online={this.state.data0.players.online}  max={this.state.data0.players.max}/> : <OfflineServer />}
                             </div>
                             <h1 className="font-weight-bold">Phoenix Classic</h1>
                             <h3 className="mt-1 mb-4">Классический сервер с большим набором<br/>
@@ -118,7 +107,7 @@ render() {
                                 alt="Pickaxe"
                             />
                             <div id="stats1">
-                                {this.state.data1.online ? <OnlineServer online={this.state.data1.players.online} max={this.state.data1.players.max} /> : <OfflineServer />}
+                                {this.state.data1.online ? <OnlineServer online={this.state.data1.players.online}  max={this.state.data1.players.max}/> : <OfflineServer />}
                             </div>
                             <h1 className="font-weight-bold">Pheonix Test</h1>
                             <h2>В разработке</h2>

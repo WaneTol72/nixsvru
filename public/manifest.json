@@ -1,7 +1,10 @@
 {
  "name": "Phoenix Project",
  "short_name": "Phoenix",
- "start_url": "/nixsvru/",
+ "description": "Игровой проект серверов ",
+ "categories": ["games"],
+ "start_url": "./",
+ "scope": ".",
  "icons": [
   {
    "src": "./android-chrome-192x192.png",
@@ -14,7 +17,7 @@
    "type": "image/png"
   }
  ],
- "theme_color": "#ffffff",
- "background_color": "#ffffff",
- "display": "standalone"
+ "theme_color": "#343a40",
+ "background_color": "#343a40",
+ "display": "minimal-ui"
 }

@@ -9,6 +9,10 @@ import Footer from "./Components/Footer";
 import Home from "./Pages/Home"
 import LOG from "./logo/server.webp"
 
+function demoAsyncCall() {
+    return new Promise((resolve) => resolve());
+}
+
 class App extends React.Component {
     state = {
         loading: true
@@ -18,7 +22,6 @@ class App extends React.Component {
         // this simulates an async action, after which the component will render the content
         demoAsyncCall().then(() => this.setState({ loading: false }));
     }
-
     render() {
 
         const { loading } = this.state;
@@ -34,7 +37,6 @@ class App extends React.Component {
                     </>
         ); // render null when app is not ready
         }
-
         return (
             <div>
                 <Header />
@@ -44,11 +46,6 @@ class App extends React.Component {
         );
     }
 }
-
-function demoAsyncCall() {
-    return new Promise((resolve) => resolve());
-}
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

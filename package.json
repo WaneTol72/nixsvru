@@ -1,6 +1,6 @@
 {
   "name": "nixsvru",
-  "homepage": "http://WaneTol72.github.io/nixsvru",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

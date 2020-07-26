@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5df5f168-d795-401a-a912-8de092e3ec5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CarouselBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CarouselBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +171,10 @@
       <workItem from="1595483316026" duration="14497000" />
       <workItem from="1595506829788" duration="2633000" />
       <workItem from="1595514788608" duration="888000" />
-      <workItem from="1595516909489" duration="968000" />
+      <workItem from="1595516909489" duration="1002000" />
+      <workItem from="1595518522416" duration="5354000" />
+      <workItem from="1595528792404" duration="4109000" />
+      <workItem from="1595774701879" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1589186004227</created>
@@ -254,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595515670935</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Костыль с картой">
+      <created>1595517908268</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1595517908268</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +308,7 @@
     <MESSAGE value="Обнова ебать подъехала" />
     <MESSAGE value="Мелкие фиксы" />
     <MESSAGE value="Удалена старая прокрутка и улучшен костыль с лейблом" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалена старая прокрутка и улучшен костыль с лейблом" />
+    <MESSAGE value="Костыль с картой" />
+    <option name="LAST_COMMIT_MESSAGE" value="Костыль с картой" />
   </component>
 </project>
