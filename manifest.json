@@ -3,7 +3,7 @@
  "short_name": "Phoenix",
  "description": "Игровой проект серверов ",
  "categories": ["games"],
- "start_url": "/nixsvru",
+ "start_url": ".",
  "icons": [
   {
    "src": "./android-chrome-192x192.png",
