@@ -20,13 +20,14 @@ class App extends React.Component {
 
     componentDidMount() {
         // this simulates an async action, after which the component will render the content
-        demoAsyncCall().then(() => this.setState({ loading: false }));
+        demoAsyncCall().then(() => this.setState({loading: false}));
     }
+
     render() {
 
-        const { loading } = this.state;
+        const {loading} = this.state;
 
-        if(loading) { // if your component doesn't have to wait for an async action, remove this block
+        if (loading) { // if your component doesn't have to wait for an async action, remove this block
             return (
                 <>
                     <div className="bg-dark bg">
@@ -34,19 +35,20 @@ class App extends React.Component {
                             <Image className="loader" src={LOG}/>
                         </div>
                     </div>
-                    </>
-        ); // render null when app is not ready
+                </>
+            ); // render null when app is not ready
         }
         return (
-            <div>
-                <Header />
-                <Home />
-                <Footer />
-            </div>
+            <>
+                <Header/>
+                <Home/>
+                <Footer/>
+            </>
         );
     }
 }
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

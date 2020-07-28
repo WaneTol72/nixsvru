@@ -1,12 +1,7 @@
-html {
-    scroll-behavior: smooth;
-}
-body {
-    background-color: #343a40!important;
-}
 .fixed-top {
-    z-index: 100!important;
+    z-index: 100 !important;
 }
+
 ::-webkit-scrollbar {
     height: 12px;
     width: 14px;
@@ -14,13 +9,16 @@ body {
     z-index: 12;
     overflow: visible;
 }
+
 ::-webkit-scrollbar-corner {
     background: #202020;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     border: 2px solid rgba(0, 0, 0, 0);
     background-color: #6d737d;
 }
+
 ::-webkit-scrollbar-thumb {
     width: 10px;
     background-color: #434953;
@@ -32,6 +30,7 @@ body {
     min-height: 32px;
     min-width: 32px;
 }
+
 ::selection {
     background: #54a5d4;
     text-shadow: 1px 1px 2px #000000aa;
@@ -39,100 +38,122 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .fullScreen {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
 .darkness {
-  filter: brightness(50%);
+    filter: brightness(50%);
 }
 
 .donate {
-    padding-top: 6%!important;
+    padding-top: 6% !important;
 }
 
-.btn-group-lg>.btn, .btn-lg {
-  padding: 0.5rem 2.5rem!important;
-  font-size: 1.5rem!important;
+.btn-group-lg > .btn, .btn-lg {
+    padding: 0.5rem 2.5rem !important;
+    font-size: 1.5rem !important;
 }
 
 .progress {
-    height: 8px!important;
-    border-radius: 0!important;
+    height: 8px !important;
 }
-#stats0>p {
+
+#stats0 > p {
     font-weight: bold;
 }
-#stats0>p>span {
+
+#stats0 > p > span {
     color: #00d000;
 }
+
 .modal-content {
-    background-color: #343a40!important;
+    background-color: #343a40 !important;
     color: white;
 }
+
 .modal-header {
-    border-bottom: 1px solid #0000006b!important;
+    border-bottom: 1px solid #0000006b !important;
 }
+
 .modal-footer {
-    border-top: 1px solid #0000006b!important;
+    border-top: 1px solid #0000006b !important;
 }
+
 .close {
-    color: #fff!important;
+    color: #fff !important;
 }
+
 .link-img {
     transition: all 250ms ease-out;
 }
+
 .link-img:hover {
     filter: brightness(75%);
 }
+
 .pix {
     transition: all 300ms ease-out;
 }
+
 .pix:hover {
     transform: scale(1.1)
 }
+
 @media (min-width: 768px) {
     .disc {
         min-height: 12em;
     }
-    .carousel-caption2>.container>#stats0>.progress {
+
+    .carousel-caption2 > .container > #stats0 > .progress {
         width: 280px;
     }
+
     .carousel-caption2 {
-        bottom: 30vh!important;
+        bottom: 30vh !important;
     }
 }
+
 @media (min-width: 1200px) {
-  #donate {
-    min-height: 100vh;
-  }
-}
-@media (max-width: 768px) {
-  nav {
-    background-color: #343a40;
-  }
-  .carousel-caption2>.container>h1 {
-      font-size: 2rem;
-  }
-    .carousel-caption2 {
-        bottom: 5vh!important;
+    #donate {
+        min-height: 100vh;
     }
-    .carousel-caption2>.container>h2 {
+}
+
+@media (max-width: 768px) {
+    nav {
+        background-color: #343a40;
+    }
+
+    .carousel-caption2 > .container > h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption2 {
+        bottom: 5vh !important;
+    }
+
+    .carousel-caption2 > .container > h2 {
         font-size: 1.5rem;
     }
-    .carousel-caption2>.container>h3 {
+
+    .carousel-caption2 > .container > h3 {
         font-size: 1rem;
     }
-    .carousel-caption2>.container>#stats0>.progress {
-        width: 60vw!important;
+
+    .carousel-caption2 > .container > #stats0 > .progress {
+        width: 60vw !important;
     }
-    .carousel-caption2>.container {
-        padding: 0!important;
+
+    .carousel-caption2 > .container {
+        padding: 0 !important;
     }
 }

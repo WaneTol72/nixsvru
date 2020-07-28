@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#536878">
-    <meta name="application-name" content="Phoenix Project">
-    <meta name="description" content="Phoenix Project - Проект игровых серверов"/>
-    <meta name="yandex-verification" content="e60561e3ad0abc92" />
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="%PUBLIC_URL%/favicon.ico" rel="shortcut icon">
+    <link href="%PUBLIC_URL%/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="%PUBLIC_URL%/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="%PUBLIC_URL%/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="%PUBLIC_URL%/manifest.json" rel="manifest">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="#536878" name="theme-color">
+    <meta content="Phoenix Project" name="application-name">
+    <meta content="Phoenix Project - Проект игровых серверов" name="description"/>
     <title>Phoenix Project</title>
     <style type="text/css">
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      .bg {
-        width: 100vw;
-        height: 100vh;
-        background-color: #343a40!important
-      }
-      .wrap {
-        width: 8em;
-        height: 8em;
-        position: absolute;
-        top: calc(50% - 4em);
-        left: calc(50% - 4em);
-      }
-      .loader{
-        box-sizing: border-box;
-        display: block;
-        margin: auto;
-        width: 8em;
-        height: 8em;
-        border: 1.1em solid rgb(255, 255, 255);
-        border-top: 1.1em solid #ff7e00;
-        border-radius: 50%;
-        animation: load8 2.1s infinite linear;
-      }
-      @keyframes load8 {
-        0% {
-          transform: rotate(0deg);
+        html {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
-        100% {
-          transform: rotate(360deg);
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #343a40 !important;
         }
-      }
+
+        .bg {
+            width: 100vw;
+            height: 100vh;
+            background-color: #343a40 !important
+        }
+
+        .wrap {
+            width: 8em;
+            height: 8em;
+            position: absolute;
+            top: calc(50% - 4em);
+            left: calc(50% - 4em);
+        }
+
+        .loader {
+            box-sizing: border-box;
+            display: block;
+            margin: auto;
+            width: 8em;
+            height: 8em;
+            border: 1.1em solid rgb(255, 255, 255);
+            border-top: 1.1em solid #ff7e00;
+            border-radius: 50%;
+            animation: load8 2.1s infinite linear;
+        }
+
+        @keyframes load8 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
-  </head>
-  <body>
-    <noscript>Вы должны включить javascript для отоброжения страницы</noscript>
-    <div id="root">
-      <div class="bg">
+</head>
+<body>
+<noscript>Вы должны включить javascript для отоброжения страницы</noscript>
+<div id="root">
+    <div class="bg">
         <div class="wrap">
-          <img alt="load" class="loader" src="%PUBLIC_URL%/server.webp"/>
+            <img alt="load" class="loader" src="%PUBLIC_URL%/server.webp"/>
         </div>
-      </div>
-      </div>
-    <script>
-      // Если браузер поддерживает service-worker - регистрируем
-      if ('serviceWorker' in navigator) {
+    </div>
+</div>
+<script>
+    // Если браузер поддерживает service-worker - регистрируем
+    if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('service-worker.js')
-                  .then(() => {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => {
                     console.log('Service Worker is registered! ');
-                  })
-                  .catch(err => {
+                })
+                .catch(err => {
                     console.log('Registration failed  ', err);
-                  });
+                });
         });
-      }
-    </script>
-  </body>
+    }
+</script>
+</body>
 </html>
