@@ -41,21 +41,12 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.fullScreen {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .darkness {
     filter: brightness(50%);
 }
 
-.donate {
-    padding-top: 6% !important;
+.carousel-inner {
+    max-height: 100%!important;
 }
 
 .btn-group-lg > .btn, .btn-lg {
@@ -73,6 +64,10 @@ code {
 
 #stats0 > p > span {
     color: #00d000;
+}
+
+.toast, .toast-header {
+    background-color: #343a40 !important;
 }
 
 .modal-content {
@@ -102,10 +97,12 @@ code {
 
 .pix {
     transition: all 300ms ease-out;
+    height: 120px;
+    width: 120px;;
 }
 
-.pix:hover {
-    transform: scale(1.1)
+.pix:hover, .donate_picture:hover {
+    transform: scale(1.1);
 }
 
 @media (min-width: 768px) {

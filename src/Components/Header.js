@@ -26,7 +26,9 @@ class Header extends Component {
                             <Nav className="ml-auto">
                                 <Nav.Link href="#home">Главная</Nav.Link>
                                 <Nav.Link href="#donate">Донат</Nav.Link>
-                                <Nav.Link href="#ifr">Карты</Nav.Link>
+                                <Nav.Link href="#post">Начать играть</Nav.Link>
+                                <Nav.Link href="#rules">Правила</Nav.Link>
+                                {/*<Nav.Link href="#ifr">Карты</Nav.Link> */}
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

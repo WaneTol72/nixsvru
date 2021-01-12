@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Image, ProgressBar} from "react-bootstrap";
+import {Accordion, Button, Card, Container, Image, ProgressBar} from "react-bootstrap";
 import {ButtonModal} from "./Modal";
 import Carousel from 'react-bootstrap/Carousel';
 import Pic1 from '../assets/pic1.webp';
@@ -10,12 +10,12 @@ const url0 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25565";
 const url1 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25566";
 
 function OnlineServer(props) {
-    let online0 = props.online;
-    let max0 = props.max;
+    let online = props.online;
+    let max = props.max;
     return (
         <>
-            <p className="p-0 m-0"><span>{online0}</span> / {max0}</p>
-            <ProgressBar variant="success" className="mr-auto ml-auto mt-2" max={max0} now={online0}/>
+            <p className="p-0 m-0"><span>{online}</span> / {max}</p>
+            <ProgressBar variant="success" className="mr-auto ml-auto mt-2" max={max} now={online}/>
         </>
     );
 }
@@ -33,7 +33,14 @@ class CarouselBox extends Component {
                 online: false,
                 players: {
                     online: 0,
-                    max: 0
+                    max: 0,
+                    list: ["Пусто"]
+                },
+                plugins: {
+                    names: []
+                },
+                motd: {
+                    html: []
                 }
             },
             data1: {
@@ -48,12 +55,12 @@ class CarouselBox extends Component {
 
     async componentDidMount() {
         async function serverStatus(url) {
-            console.log("Соединение с API...");
             try {
-                console.log("Запрос JSON...");
+                console.log("Запрос JSON... " + url);
                 const response = await fetch(url);
                 const data = await response.json();
                 console.log("Данные успешно занесены");
+                console.log(data.online ?  "Онлайн: " + data.players.online : "Сервер выключен" );
                 return data
             } catch (err) {
                 console.error('Ошибка:', err);
@@ -74,10 +81,10 @@ class CarouselBox extends Component {
     render() {
         return (
             <>
-                <Carousel id="home" interval={null} indicators={false} fade={true}>
+                <Carousel className="" id="home" interval={null} indicators={false} fade={true}>
                     <Carousel.Item>
                         <Image
-                            className="darkness d-block min-vh-100 w-100"
+                            className="darkness d-block min-vh-100 vw-100 h-100"
                             style={{objectFit: 'cover'}}
                             src={Pic1}
                             alt="Picture-1"
@@ -86,14 +93,11 @@ class CarouselBox extends Component {
                             <Container>
                                 <Image
                                     src={Pickaxe}
-                                    height={120}
                                     className="pix mb-2"
                                     alt="Pickaxe"
                                 />
                                 <div id="stats0">
-                                    {this.state.data0.online ? <OnlineServer online={this.state.data0.players.online}
-                                                                             max={this.state.data0.players.max}/> :
-                                        <OfflineServer/>}
+                                    {this.state.data0.online ? <OnlineServer online={this.state.data0.players.online} max={this.state.data0.players.max}/> : <OfflineServer/>}
                                 </div>
                                 <h1 className="font-weight-bold">Phoenix Classic</h1>
                                 <h3 className="mt-1 mb-4">Классический сервер с большим набором<br/>
@@ -104,13 +108,87 @@ class CarouselBox extends Component {
                                     text={"Играть"}
                                     title={"Окно копирования"}
                                     variant={"success"}
-                                    body={<><h4>Скопируйте адрес:</h4><h5>play.nixsv.ru</h5><p>Скопируйте ip и добавьте
-                                        его в minecraft сервера, чтобы не забыть!</p></>}
+                                    body={<>
+                                        <h4>Адрес: <span style={{color: "gold"}}>play.nixsv.ru</span></h4>
+                                        <p>Скопируйте ip и добавьте
+                                        его в minecraft сервера, чтобы не забыть!</p>
+                                    </>}
+                                />
+                                <ButtonModal
+                                    text={"Подробнее"}
+                                    title={"Описание сервера Phoenix Classic"}
+                                    body={<>
+                                        <Accordion>
+                                            <Card className="bg-dark">
+                                                <Card.Header className="text-center">
+                                                    <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="0">
+                                                        Описание:
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="0">
+                                                    <Card.Body className="text-left">
+                                                        Сервер со стандартным набором плагинов для комфортной и разнообразной игры, на нем есть различные мини-игры, приваты, экономика и многое другое!
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card className="bg-dark">
+                                                <Card.Header className="text-center">
+                                                    <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="1">
+                                                        Игроки на сервере
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="1">
+                                                    <Card.Body className="text-left">
+                                                        <p className="text-center">Игроков всего: {this.state.data0.players.online} / {this.state.data0.players.max}</p>
+                                                        {this.state.data0.players.list.join(', ')}
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card className="bg-dark">
+                                                <Card.Header className="text-center">
+                                                    <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="2">
+                                                        Список плагинов
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="2">
+                                                    <Card.Body className="text-left">
+                                                        {this.state.data0.plugins.names.join(', ')}
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card className="bg-dark">
+                                                <Card.Header className="text-center">
+                                                    <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="3">
+                                                        Правила
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="3">
+                                                    <Card.Body className="text-left">
+                                                        <h4>Правила игры на Classic сервере:</h4>
+                                                        <p>1. Гриферство запрещено.*</p>
+                                                        <p>2. PVP разрешен.</p>
+                                                        <p>3. Читы запрещены.</p>
+                                                        <hr/>
+                                                        <p>Помните, правилам подчиняются как обычные игроки, так и администрация сервера.
+                                                            Если вы вдруг увидели нарушителя, сообщайте об этом Адмнистрации сервера в дискорд или в ЛС группы ВКонтакте.</p>
+                                                        <p>*Гриферство (от англ. griefing — вредительство) —
+                                                            акт нанесения морального или материального ущерба людям в компьютерных играх (Здесь: Minecraft).
+                                                            Иными словами, это игровой вандализм.
+                                                            В Minecraft гриферство в основном осуществляется путём разрушения чужих построек,
+                                                            хранилища предметов или внесением в них вредных или несанкционированных изменений,
+                                                            лишением игроков полученного игрового имущества.
+                                                            (Намеренное ввождение в заблуждение игроков с целью наживы,
+                                                            Намеренное проникновение в дома с целью разрушения и грабежа)</p>
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                        </Accordion>
+                                    </>}
                                 />
                             </Container>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
+                    {/*<Carousel.Item>
                         <Image
                             className="darkness d-block min-vh-100 w-100"
                             style={{objectFit: 'cover'}}
@@ -125,9 +203,7 @@ class CarouselBox extends Component {
                                     alt="Pickaxe"
                                 />
                                 <div id="stats1">
-                                    {this.state.data1.online ? <OnlineServer online={this.state.data1.players.online}
-                                                                             max={this.state.data1.players.max}/> :
-                                        <OfflineServer/>}
+                                    {this.state.data1.online ? <OnlineServer online={this.state.data1.players.online} max={this.state.data1.players.max}/> : <OfflineServer/>}
                                 </div>
                                 <h1 className="font-weight-bold">Pheonix Test</h1>
                                 <h2>В разработке</h2>
@@ -141,7 +217,7 @@ class CarouselBox extends Component {
                                 />
                             </Container>
                         </Carousel.Caption>
-                    </Carousel.Item>
+                    </Carousel.Item> */}
                 </Carousel>
             </>
         );

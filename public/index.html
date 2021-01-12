@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <link href="%PUBLIC_URL%/favicon.ico" rel="shortcut icon">
@@ -75,6 +76,11 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, no_cover: 1, width: "auto", height: "400", color1: '434953', color2: 'FFFFFF', color3: 'FFFFFF'}, 172510409);
+    VK.Widgets.CommunityMessages("vk_community_messages", 172510409, {widgetPosition: "left", disableExpandChatSound: "1",tooltipButtonText: "Есть вопрос?"});
+    VK.Widgets.Article("vk_article_-172510409_8441", "@phoenix_proj-minecraft-guide");
+</script>
 <script>
     // Если браузер поддерживает service-worker - регистрируем
     if ('serviceWorker' in navigator) {

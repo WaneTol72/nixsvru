@@ -57,11 +57,11 @@ class Footer extends Component {
 
     render() {
         return (
-            <Container className="pb-2 text-white mw-100 bg-dark">
+            <Container id="Footer" className="mt-5 pb-2 text-white mw-100 bg-dark">
                 <Row className="pr-4 pl-4">
                     <Col lg={2}>
                         <h2 className="mb-3">Контакты:</h2>
-                        <Contacts img={VITEK} href={"https://vk.com/o_0ll0_o"} name={"Jerezoff"}
+                        <Contacts img={VITEK} href={"https://vk.com/hijerez"} name={"Jerezoff"}
                                   description={"Создатель проекта"}/>
                         <Contacts img={WANE} href={"https://vk.com/panzerkampfwagen6tiger"} name={"WaneTol72"}
                                   description={"Разработчик сайта"}/>
@@ -76,12 +76,14 @@ class Footer extends Component {
                             <ContactLink img={DIS} href={"https://discord.com/invite/g2ug2Us"}/>
                         </div>
                     </Col>
-                    <Col lg={8}>
-                        <iframe title="Discord" src="https://discordapp.com/widget?id=447745228456198155&theme=dark"
-                                width="100%" height="350" frameBorder="0"/>
+                    <Col lg={4}>
+                        <div id="vk_groups" className="d-inline-block w-100"></div>
+                    </Col>
+                    <Col lg={4}>
+                        <iframe title="Discord" src="https://discordapp.com/widget?id=447745228456198155&theme=dark" height="400" className="w-100" frameBorder="0"/>
                     </Col>
                 </Row>
-                <h5 className="text-center m-0">©2018-2020 Phoenix Project</h5>
+                <h5 className="text-center m-0">©2018-2021 Phoenix Project</h5>
             </Container>
         );
     }
