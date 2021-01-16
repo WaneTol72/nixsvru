@@ -128,7 +128,6 @@ function DonateCarousel() {
     return (
         <div className="slides">
             <button onClick={() => dispatch({ type: "NEXT" })}>‹</button>
-
             {[...slides, ...slides, ...slides].map((slide, i) => {
                 let offset = slides.length + (state.slideIndex - i);
                 return <Slide slide={slide} offset={offset} key={i} />;

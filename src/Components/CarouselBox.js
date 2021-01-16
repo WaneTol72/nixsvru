@@ -79,6 +79,69 @@ class CarouselBox extends Component {
     }
 
     render() {
+        const Server0 = {
+            desc: `Сервер со стандартным набором плагинов для комфортной и разнообразной игры, на нем есть различные мини-игры, приваты, экономика и многое другое!`,
+            commands: `
+            /rg claim название - Создать регион
+            /rg addowner - Добавить владельца в регион
+            /rg addmember - Добавить игрока в регион
+            /rg remove - Удалить регион
+            /rg info - Инфо о регионе
+            /rg removemember - Удалить игрока из региона
+            /rg removeowner - Удалить владельца из региона
+            //wand - Топорик для выделения территории
+            //desel - Сбросить выделение территории
+            //pos1 - Выбрать первую точку
+            //pos2 - Выбрать вторую точку
+            /skin set - Установить скин
+            /skin clear - Сбросить скин
+            /skins - Меню скинов
+            /skin update - обновить скин из базы
+            /jobs - работы
+            /warp - варп
+            /tpaccept - Принять запрос на тп
+            /tpdeny - Отклонить запрос на тп
+            /spawn - Телепорт на спавн
+            /sethome - Установить точку дома
+            /home - Телепорт домой
+            /delhome - Убрать точку дома
+            /rules - Правила на сервере
+            /pay - Передать деньги игроку
+            /msg - Отправить личное сообщение
+            /mail - Отправить сообщение по почте
+            /list - Список игроков на сервере
+            /kit start - Стартовый набор игрока
+            /help - помощь по коммандам
+            /helpop - попросить помощь у админа
+            /balance - ваш баланс на сервере
+            /baltop - топ богачей
+            /afk - пометить себя AFK
+            /warp list - список варпов
+            /clans - кланы
+            /menu - открыть меню сервера
+            /rtp - рандомный телепорт по карте`,
+            rules: () => {
+                return (
+                        <>
+                            <h4>Правила игры на Classic сервере:</h4>
+                            <p>1. Гриферство запрещено.*</p>
+                            <p>2. PVP разрешен.</p>
+                            <p>3. Читы запрещены.</p>
+                            <hr/>
+                            <p>Помните, правилам подчиняются как обычные игроки, так и администрация сервера.
+                                Если вы вдруг увидели нарушителя, сообщайте об этом Адмнистрации сервера в дискорд или в ЛС группы ВКонтакте.</p>
+                            <p>*Гриферство (от англ. griefing — вредительство) —
+                                акт нанесения морального или материального ущерба людям в компьютерных играх (Здесь: Minecraft).
+                                Иными словами, это игровой вандализм.
+                                В Minecraft гриферство в основном осуществляется путём разрушения чужих построек,
+                                хранилища предметов или внесением в них вредных или несанкционированных изменений,
+                                лишением игроков полученного игрового имущества.
+                                (Намеренное ввождение в заблуждение игроков с целью наживы,
+                                Намеренное проникновение в дома с целью разрушения и грабежа)</p>
+                        </>
+                    )
+            }
+        }
         return (
             <>
                 <Carousel className="" id="home" interval={null} indicators={false} fade={true}>
@@ -122,63 +185,65 @@ class CarouselBox extends Component {
                                             <Card className="bg-dark">
                                                 <Card.Header className="text-center">
                                                     <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="0">
-                                                        Описание:
+                                                        Описание
                                                     </Accordion.Toggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="0">
                                                     <Card.Body className="text-left">
-                                                        Сервер со стандартным набором плагинов для комфортной и разнообразной игры, на нем есть различные мини-игры, приваты, экономика и многое другое!
+                                                        {Server0.desc}
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                             <Card className="bg-dark">
                                                 <Card.Header className="text-center">
                                                     <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="1">
-                                                        Игроки на сервере
+                                                        Доступные команды
                                                     </Accordion.Toggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="1">
-                                                    <Card.Body className="text-left">
-                                                        <p className="text-center">Игроков всего: {this.state.data0.players.online} / {this.state.data0.players.max}</p>
-                                                        {this.state.data0.players.list.join(', ')}
+                                                    <Card.Body className="text-left" >
+                                                        <p style={{whiteSpace: "break-spaces"}}>{Server0.commands}</p>
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                             <Card className="bg-dark">
                                                 <Card.Header className="text-center">
                                                     <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="2">
-                                                        Список плагинов
+                                                        Игроки на сервере
                                                     </Accordion.Toggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="2">
                                                     <Card.Body className="text-left">
-                                                        {this.state.data0.plugins.names.join(', ')}
+                                                        <p className="text-center">Игроков всего:
+                                                            {this.state.data0.online ? <p>{this.state.data0.players.online} / {this.state.data0.players.max}</p> : <p>Сервер выключен</p>}
+                                                        </p>
+                                                        <p>{this.state.data0.online ? this.state.data0.players.list.join(', ') : <></>}</p>
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                             <Card className="bg-dark">
                                                 <Card.Header className="text-center">
                                                     <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="3">
-                                                        Правила
+                                                        Список плагинов
                                                     </Accordion.Toggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="3">
                                                     <Card.Body className="text-left">
-                                                        <h4>Правила игры на Classic сервере:</h4>
-                                                        <p>1. Гриферство запрещено.*</p>
-                                                        <p>2. PVP разрешен.</p>
-                                                        <p>3. Читы запрещены.</p>
-                                                        <hr/>
-                                                        <p>Помните, правилам подчиняются как обычные игроки, так и администрация сервера.
-                                                            Если вы вдруг увидели нарушителя, сообщайте об этом Адмнистрации сервера в дискорд или в ЛС группы ВКонтакте.</p>
-                                                        <p>*Гриферство (от англ. griefing — вредительство) —
-                                                            акт нанесения морального или материального ущерба людям в компьютерных играх (Здесь: Minecraft).
-                                                            Иными словами, это игровой вандализм.
-                                                            В Minecraft гриферство в основном осуществляется путём разрушения чужих построек,
-                                                            хранилища предметов или внесением в них вредных или несанкционированных изменений,
-                                                            лишением игроков полученного игрового имущества.
-                                                            (Намеренное ввождение в заблуждение игроков с целью наживы,
-                                                            Намеренное проникновение в дома с целью разрушения и грабежа)</p>
+                                                        {
+                                                            this.state.data0.online ? this.state.data0.plugins.names.join(', ') : <p>Сервер выключен</p>
+                                                        }
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card className="bg-dark">
+                                                <Card.Header className="text-center">
+                                                    <Accordion.Toggle className="text-white font-weight-bold" as={Button} variant="link" eventKey="4">
+                                                        Правила
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="4">
+                                                    <Card.Body className="text-left">
+                                                        {Server0.rules()}
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
