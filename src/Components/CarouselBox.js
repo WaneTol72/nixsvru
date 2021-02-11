@@ -23,7 +23,6 @@ function OnlineServer(props) {
 function OfflineServer() {
     return (<h2>Сервер <span style={{color: "red"}}>выключен</span></h2>)
 }
-
 class CarouselBox extends Component {
 
     constructor(props) {
@@ -79,6 +78,28 @@ class CarouselBox extends Component {
     }
 
     render() {
+        function onlinePlayers(online, playersOnline, playersMax) {
+            if (online) {
+                return (<OnlineServer online={playersOnline} max={playersMax}/>)
+            }
+            else {
+                return  (<OfflineServer/>)
+            }
+        }
+        function plugins(online, plugins) {
+            if (online) {
+                if (plugins) {
+                    return(plugins.names.join(', '))
+                }
+                else {
+                    return(<p>Нет доступа к плагинам</p>)
+                }
+            }
+            else {
+                return(<p>Сервер выключен</p>)
+            }
+        }
+
         const Server0 = {
             desc: `Сервер со стандартным набором плагинов для комфортной и разнообразной игры, на нем есть различные мини-игры, приваты, экономика и многое другое!`,
             commands: `
@@ -160,7 +181,7 @@ class CarouselBox extends Component {
                                     alt="Pickaxe"
                                 />
                                 <div id="stats0">
-                                    {this.state.data0.online ? <OnlineServer online={this.state.data0.players.online} max={this.state.data0.players.max}/> : <OfflineServer/>}
+                                    {onlinePlayers(this.state.data0.online, this.state.data0.players.online, this.state.data0.players.max)}
                                 </div>
                                 <h1 className="font-weight-bold">Phoenix Classic</h1>
                                 <h3 className="mt-1 mb-4">Классический сервер с большим набором<br/>
@@ -217,7 +238,7 @@ class CarouselBox extends Component {
                                                         <p className="text-center">Игроков всего:
                                                             {this.state.data0.online ? <p>{this.state.data0.players.online} / {this.state.data0.players.max}</p> : <p>Сервер выключен</p>}
                                                         </p>
-                                                        <p>{this.state.data0.online ? this.state.data0.players.list.join(', ') : <></>}</p>
+                                                        <p>{this.state.data0.online ? this.state.data0.players.online > 0 ? this.state.data0.players.list.join(', ') : <></> : <></>}</p>
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
@@ -230,7 +251,7 @@ class CarouselBox extends Component {
                                                 <Accordion.Collapse eventKey="3">
                                                     <Card.Body className="text-left">
                                                         {
-                                                            this.state.data0.online ? this.state.data0.plugins.names.join(', ') : <p>Сервер выключен</p>
+                                                            plugins(this.state.data0.online, this.state.data0.plugins)
                                                         }
                                                     </Card.Body>
                                                 </Accordion.Collapse>

@@ -104,7 +104,6 @@ code {
 .pix:hover, .donate_picture:hover {
     transform: scale(1.1);
 }
-
 @media (min-width: 768px) {
     .disc {
         min-height: 12em;
@@ -128,6 +127,10 @@ code {
 @media (max-width: 768px) {
     nav {
         background-color: #343a40;
+    }
+
+    #vk_groups {
+        display: none!important;
     }
 
     .carousel-caption2 > .container > h1 {

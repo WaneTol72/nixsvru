@@ -98,24 +98,24 @@ function Slide({ slide, offset}) {
                 <div className="slideContentInner">
                     <Image
                         src={slide.picture}
-                        className="donate_picture d-inline-block"
+                        className="donate_picture"
                         style={{verticalAlign: "sub"}}
                         alt="Logo-Donate"
                     />
-                    <h2 className="slideTitle" style={{color: slide.titleColor}}>{slide.title}</h2>
+                    <h2 className="slideTitle" >{slide.title}</h2>
                     <h3 className="slideSubtitle">{slide.subtitle}</h3>
                     <p className="slideDescription" style={{whiteSpace: "pre-line"}}>{slide.description}</p>
                     <p className="slideDescription">Цена: {slide.price} Руб.</p>
                     <Button size="lg" className="mb-2 mt-2 pr-5 pl-5 rounded-pill" variant="success" href="http://shop.nixsv.ru/">Купить</Button>
-                    <HrefModal
-                    className="slideDescription mb-5"
-                    text={"Подробнее"}
-                    title={"Полное описание " + slide.title}
-                    fulldesc={slide.fulldesc}
-                    perks={slide.perks}
-                    commands={slide.commands}
-                    pets={slide.pets}
-                />
+                    {slide.perks ? <HrefModal
+                        className="slideDescription mb-5"
+                        text={"Подробнее"}
+                        title={"Полное описание " + slide.title}
+                        fulldesc={slide.fulldesc}
+                        perks={slide.perks}
+                        commands={slide.commands}
+                        pets={slide.pets}
+                    />: <></>}
                 </div>
             </div>
         </div>

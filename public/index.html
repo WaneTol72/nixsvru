@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+    <script defer type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta name="yandex-verification" content="536d1eaff68847ae" />
@@ -14,12 +14,12 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="#536878" name="theme-color">
     <meta content="Phoenix Project" name="application-name">
-    <meta content="
-    Мы - проект который предоставляет игровые сервера по Minecraft,
-     Наша идея - предложить игрокам качественные сервера, круглосуточную поддержку,
-      сбалансированный донат и самые новые технологии для того чтобы сделать игровой процесс наиболее приятным и интересным!
-      Качество нашей работы подтверждается стремлением быть примером для множества серверов!
-" name="description"/>
+    <meta content=
+                  "Мы - проект который предоставляет игровые сервера по Minecraft,
+    Наша идея - предложить игрокам качественные сервера, круглосуточную поддержку,
+    сбалансированный донат и самые новые технологии для того чтобы сделать игровой процесс наиболее приятным и интересным!
+    Качество нашей работы подтверждается стремлением быть примером для множества серверов!"
+          name="description"/>
     <title>Phoenix Project - Проект игровых серверов</title>
     <style type="text/css">
         html {
@@ -83,9 +83,12 @@
     </div>
 </div>
 <script type="text/javascript">
-    VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, no_cover: 1, width: "auto", height: "400", color1: '434953', color2: 'FFFFFF', color3: 'FFFFFF'}, 172510409);
-    VK.Widgets.CommunityMessages("vk_community_messages", 172510409, {widgetPosition: "left", disableExpandChatSound: "1",tooltipButtonText: "Есть вопрос?"});
-    VK.Widgets.Article("vk_article_-172510409_8441", "@phoenix_proj-minecraft-guide");
+    window.onload = () => {
+        el = VK.Widgets
+        el.Group("vk_groups", {mode: 4, wide: 1, no_cover: 1, height: "400", width: "400", color1: '434953', color2: 'FFFFFF', color3: 'FFFFFF'}, 172510409)
+        el.CommunityMessages("vk_community_messages", 172510409, {widgetPosition: "left", disableExpandChatSound: "1",tooltipButtonText: "Есть вопрос?"})
+        el.Article("vk_article_-172510409_8441", "@phoenix_proj-minecraft-guide");
+    }
 </script>
 <script>
     // Если браузер поддерживает service-worker - регистрируем
