@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Col, Container, Image, Row} from "react-bootstrap";
-import VITEK from '../logo/VITEK.webp';
+import VICTOR from '../logo/VITEK.webp';
 import WANE from '../logo/WANE.webp';
 import BARA from '../logo/BARA.webp';
 import INST from '../logo/INST.webp';
@@ -61,7 +61,7 @@ class Footer extends Component {
                 <Row className="pr-4 pl-4">
                     <Col lg={2}>
                         <h2 className="mb-3">Контакты:</h2>
-                        <Contacts img={VITEK} href={"https://vk.com/hijerez"} name={"Jerezoff"}
+                        <Contacts img={VICTOR} href={"https://vk.com/hijerez"} name={"Jerezoff"}
                                   description={"Создатель проекта"}/>
                         <Contacts img={WANE} href={"https://vk.com/panzerkampfwagen6tiger"} name={"WaneTol72"}
                                   description={"Разработчик сайта"}/>
@@ -77,7 +77,7 @@ class Footer extends Component {
                         </div>
                     </Col>
                     <Col lg={4}>
-                        <div id="vk_groups" className="d-inline-block w-100"></div>
+                        <div id="vk_groups" className="d-inline-block"></div>
                     </Col>
                     <Col lg={4}>
                         <iframe title="Discord" src="https://discordapp.com/widget?id=447745228456198155&theme=dark" height="400" className="w-100" frameBorder="0"/>

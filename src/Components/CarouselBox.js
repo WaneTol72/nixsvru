@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import {Accordion, Button, Card, Container, Image, ProgressBar} from "react-bootstrap";
+import {Accordion, Button, Card, Container, Image, ProgressBar, Carousel} from "react-bootstrap";
 import {ButtonModal} from "./Modal";
-import Carousel from 'react-bootstrap/Carousel';
 import Pic1 from '../assets/pic1.webp';
-import Pic2 from '../assets/pic2.webp';
 import Pickaxe from '../logo/pickaxe.webp'
 
 const url0 = "https://api.mcsrvstat.us/2/play.nixsv.ru:25565";
@@ -92,7 +90,7 @@ class CarouselBox extends Component {
                     return(plugins.names.join(', '))
                 }
                 else {
-                    return(<p>Нет доступа к плагинам</p>)
+                    return(<p>Нет информации о плагинах.</p>)
                 }
             }
             else {
@@ -196,8 +194,7 @@ class CarouselBox extends Component {
                                         <h4>Адрес: <span style={{color: "gold"}}>play.nixsv.ru</span></h4>
                                         <p>Скопируйте ip и добавьте
                                         его в minecraft сервера, чтобы не забыть!</p>
-                                    </>}
-                                />
+                                    </>}/>
                                 <ButtonModal
                                     text={"Подробнее"}
                                     title={"Описание сервера Phoenix Classic"}
@@ -238,7 +235,7 @@ class CarouselBox extends Component {
                                                         <p className="text-center">Игроков всего:
                                                             {this.state.data0.online ? <p>{this.state.data0.players.online} / {this.state.data0.players.max}</p> : <p>Сервер выключен</p>}
                                                         </p>
-                                                        <p>{this.state.data0.online ? this.state.data0.players.online > 0 ? this.state.data0.players.list.join(', ') : <></> : <></>}</p>
+                                                        <p>{this.state.data0.online ? this.state.data0.players.online > 0 ? this.state.data0.players.list.join(', ') : <>Нет информации о игроках.</> : <>Сервер выключен</>}</p>
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
@@ -250,9 +247,7 @@ class CarouselBox extends Component {
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="3">
                                                     <Card.Body className="text-left">
-                                                        {
-                                                            plugins(this.state.data0.online, this.state.data0.plugins)
-                                                        }
+                                                        {plugins(this.state.data0.online, this.state.data0.plugins)}
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
@@ -274,36 +269,6 @@ class CarouselBox extends Component {
                             </Container>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    {/*<Carousel.Item>
-                        <Image
-                            className="darkness d-block min-vh-100 w-100"
-                            style={{objectFit: 'cover'}}
-                            src={Pic2}
-                        />
-                        <Carousel.Caption className="carousel-caption2">
-                            <Container>
-                                <Image
-                                    src={Pickaxe}
-                                    height={120}
-                                    className="pix mb-2"
-                                    alt="Pickaxe"
-                                />
-                                <div id="stats1">
-                                    {this.state.data1.online ? <OnlineServer online={this.state.data1.players.online} max={this.state.data1.players.max}/> : <OfflineServer/>}
-                                </div>
-                                <h1 className="font-weight-bold">Pheonix Test</h1>
-                                <h2>В разработке</h2>
-                                <ButtonModal
-                                    disabled={true}
-                                    text={"Играть"}
-                                    title={"Окно копирования"}
-                                    variant={"success"}
-                                    body={<><h4>Скопируйте адрес:</h4><h5>Пусто</h5><p>Скопируйте ip и добавьте его в
-                                        minecraft сервера, чтобы не забыть!</p></>}
-                                />
-                            </Container>
-                        </Carousel.Caption>
-                    </Carousel.Item> */}
                 </Carousel>
             </>
         );
