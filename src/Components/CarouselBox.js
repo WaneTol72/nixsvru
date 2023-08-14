@@ -179,7 +179,7 @@ class CarouselBox extends Component {
                                     alt="Pickaxe"
                                 />
                                 <div id="stats0">
-                                    {onlinePlayers(this.state.data0.online, this.state.data0.players.online, this.state.data0.players.max)}
+                                    {this.state.data0.online ? onlinePlayers(this.state.data0.online, this.state.data0.players.online, this.state.data0.players.max) : "Сервер офлайн"}
                                 </div>
                                 <h1 className="font-weight-bold">Phoenix Classic</h1>
                                 <h3 className="mt-1 mb-4">Классический сервер с большим набором<br/>
