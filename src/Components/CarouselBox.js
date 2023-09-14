@@ -57,7 +57,7 @@ class CarouselBox extends Component {
                 const response = await fetch(url);
                 const data = await response.json();
                 console.log("Данные успешно занесены");
-                console.log(data.online ?  "Онлайн: " + data.players.online : "Сервер выключен" );
+                console.log(data.online ?  "Онлайн: " + data.players?.online : "Сервер выключен" );
                 return data
             } catch (err) {
                 console.error('Ошибка:', err);
@@ -179,7 +179,7 @@ class CarouselBox extends Component {
                                     alt="Pickaxe"
                                 />
                                 <div id="stats0">
-                                    {this.state.data0.online ? onlinePlayers(this.state.data0.online, this.state.data0.players.online, this.state.data0.players.max) : "Сервер офлайн"}
+                                    {this.state.data0.online ? onlinePlayers(this.state.data0.online, this.state.data0.players?.online, this.state.data0.players.max) : "Сервер офлайн"}
                                 </div>
                                 <h1 className="font-weight-bold">Phoenix Classic</h1>
                                 <h3 className="mt-1 mb-4">Классический сервер с большим набором<br/>
